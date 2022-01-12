@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.petrik.filmdb.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox spacing="10.0">
+      <children>
+         <Button mnemonicParsing="false" onAction="#addClick" text="Hozaadas" />
+         <Button mnemonicParsing="false" onAction="#editClick" text="Modositas" />
+         <Button mnemonicParsing="false" onAction="#deleteClick" style="-fx-background-color: red;" text="Torles" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Button>
+      </children>
+   </HBox>
+   <TableView fx:id="movieTable" prefHeight="200.0">
+     <columns>
+       <TableColumn fx:id="titleCol" minWidth="100.0" prefWidth="200.0" text="Cim" />
+       <TableColumn fx:id="categoryCol" minWidth="50.0" prefWidth="150.0" text="Kategoria" />
+         <TableColumn fx:id="lengthCol" minWidth="50.0" prefWidth="75.0" text="Hossz" />
+         <TableColumn fx:id="ratingCol" minWidth="50.0" prefWidth="75.0" text="Ertekeles" />
+     </columns>
+   </TableView>
+</VBox>
